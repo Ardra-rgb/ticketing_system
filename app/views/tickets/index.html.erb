@@ -1,0 +1,6 @@
+<h1> All Tickets <h1>
+<% @tickets.each do |ticket|%>
+<p> <%= ticket.title %> </p>
+<p> <%= ticket.description %> </p>
+<p>Priority: <%= ticket.priority %></p>
+<%end%>

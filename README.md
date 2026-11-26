@@ -1,25 +1,49 @@
-# README
+# Ticketing System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+A ticketing application built using Ruby on Rails and PostgreSQL. It allows users to create and view tickets.
 
-* Ruby version
+## Technology Stack
 
-* System dependencies
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- HTML / ERB
+- CSS / Bootstrap
+- Git and GitHub
 
-* Configuration
+## Database Design
 
-* Database creation
+### Users
+- name
+- email
 
-* Database initialization
+### Tickets
+- title
+- description
+- status
+- user_id
 
-* How to run the test suite
+Relationship:
+- A User has many Tickets.
+- A Ticket belongs to a User.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setup Instructions
 
-* Deployment instructions
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies.
+4. Configure the database.
+5. Create and migrate the database.
+6. Start the Rails server.
 
-* ...
-# ticketing_system
+## Running the Application
+
+Run the Rails server and access the application through your browser.
+
+## Features
+
+- Ticket creation
+- Ticket listing
+- Ticket details
