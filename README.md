@@ -2,7 +2,7 @@
 
 ## Overview
 
-A ticketing application built using Ruby on Rails and PostgreSQL. It allows users to create and view tickets.
+A ticketing application built using Ruby on Rails and PostgreSQL. The application currently allows users to create tickets and view the list of tickets.
 
 ## Technology Stack
 
@@ -10,22 +10,28 @@ A ticketing application built using Ruby on Rails and PostgreSQL. It allows user
 - Ruby on Rails
 - PostgreSQL
 - HTML / ERB
-- CSS / Bootstrap
+- CSS
 - Git and GitHub
 
 ## Database Design
 
 ### Users
-- name
-- email
+
+- `id`
+- `name`
+- `email`
 
 ### Tickets
-- title
-- description
-- status
-- user_id
 
-Relationship:
+- `id`
+- `title`
+- `description`
+- `status`
+- `priority`
+- `user_id`
+
+### Relationships
+
 - A User has many Tickets.
 - A Ticket belongs to a User.
 
@@ -34,16 +40,33 @@ Relationship:
 1. Clone the repository.
 2. Navigate to the project directory.
 3. Install dependencies.
-4. Configure the database.
-5. Create and migrate the database.
+4. Create the database.
+5. Run database migrations.
 6. Start the Rails server.
+
+### Commands
+
+```bash
+git clone https://github.com/Ardra-rgb/ticketing_system.git
+cd ticketing_system
+bundle install
+bin/rails db:create
+bin/rails db:migrate
+bin/rails server
+```
 
 ## Running the Application
 
-Run the Rails server and access the application through your browser.
+Start the Rails server and access the application through your browser:
+
+`http://localhost:3000/tickets`
 
 ## Features
 
 - Ticket creation
 - Ticket listing
-- Ticket details
+- Ticket title and description validation
+- Priority selection
+- Automatic initial ticket status
+- Database persistence
+- User-ticket association
